@@ -58,27 +58,35 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="producto">Producto</label>
-                    <input type="text" id="producto" placeholder="Nombre del producto" required>
-                </div>
-                <div class="form-group">
-                    <label for="referencia">Referencia</label>
-                    <input type="text" id="referencia" placeholder="Código o referencia" required>
-                </div>
-                <div class="form-group cantidad-group">
-                    <label for="cantidad">Cantidad</label>
-                    <input type="text" id="cantidad" min="1" placeholder="0" required>
+            <div id="contenedorProductos">
+                <div class="bloque-producto">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                        <span class="producto-numero" style="color: #fff; font-weight: 600; font-size: 14px;">Producto #1</span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Producto</label>
+                            <input type="text" class="input-producto" placeholder="Nombre del producto" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Referencia</label>
+                            <input type="text" class="input-referencia" placeholder="Código o referencia" required>
+                        </div>
+                        <div class="form-group cantidad-group">
+                            <label>Cantidad</label>
+                            <input type="text" class="input-cantidad" min="1" placeholder="0" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Características del Insumo</label>
+                        <input type="text" class="input-caracteristica" placeholder="Color, tamaño, material, etc." required>
+                    </div>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="caracteristica">Características del Insumo</label>
-                <input type="text" id="caracteristica" placeholder="Color, tamaño, material, etc." required>
-            </div>
+            <button type="button" id="btnAgregarProducto" class="btn-secundario">+ Agregar otro producto</button>
 
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 20px;">
                 <label for="justificacion">Justificación de la Compra</label>
                 <textarea id="justificacion" rows="3" placeholder="Explica por qué se requiere este insumo..." required></textarea>
             </div>
@@ -96,6 +104,5 @@
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
